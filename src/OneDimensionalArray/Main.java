@@ -19,9 +19,39 @@ class Main {
 //		int remainder = main.Remainder();
 //		System.out.println(remainder);
 //		double average = main.Average();
-		main.oxquizTotal();
+//		main.oxquizTotal();
+		main.aboveAverage();
 	}
-
+	
+	// 4344 Æò±ÕÀº ³Ñ°ÚÁö 2021.06.05
+	public void aboveAverage() {
+	 
+		sc = new Scanner(System.in);
+		int testCase = sc.nextInt();
+		
+		for(int i = 0 ; i < testCase ; i++) {
+			double average = 0;
+			double sum = 0;
+			double count = 0;
+			int studentCount = sc.nextInt();
+			int[] averagePerStudentArray = new int[studentCount];
+			for(int j = 0 ; j < averagePerStudentArray.length ; j++) {
+				averagePerStudentArray[j] = sc.nextInt();
+				sum += averagePerStudentArray[j];
+			}
+			
+			average = sum / studentCount;
+			
+			for(int k = 0 ; k < averagePerStudentArray.length ; k++ ) {
+				if(average < averagePerStudentArray[k]) {
+					count++;
+				}
+			}
+			System.out.printf("%.3f%%\n",(count/studentCount)*100);
+		}
+		
+	}
+	
 	// ox ÄûÁî 2021.06.05
 	public void oxquizTotal() {
 
