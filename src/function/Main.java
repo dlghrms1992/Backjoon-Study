@@ -12,21 +12,37 @@ class Main {
 //		long sum = test.sum(a);
 		
 //		main.SelfNumber();
-		main.ArithmeticSequnce(scanner);
+	
+		System.out.println(main.ArithmeticSequnce(scanner.nextInt()));
 		
 	}
 
 	// 1065 한수 2021.06.06
-	private void ArithmeticSequnce(Scanner scanner) {
+	private int ArithmeticSequnce(int num) {
 		
-		int n = scanner.nextInt();
-		int count = 0;
-		for(int i = 0 ; i < n ; i++) {
-			count++;
-		}
+		int cnt = 0;
 		
-		System.out.println(count);
+			if(num < 100) {
+				return 0;
+			}else {
+				
+				if(num == 1000) {
+					num = 999;
+				}
+				for(int i = 0 ; i < num ; i++) {
+					int hun = i / 100;
+					int ten = (i / 10) % 10;
+					int one = i % 10;
+					System.out.println(ten);
+					if((hun - ten) == (ten - one)) {
+						cnt++;
+					}
+				}	
+					
+			}
+			return cnt;
 	}
+
 
 	// 4673 셀프넘버 2021.06.06
 	void SelfNumber() {
