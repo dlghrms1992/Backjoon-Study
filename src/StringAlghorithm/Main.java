@@ -10,7 +10,27 @@ class Main {
 		
 //		System.out.println(ASCIIConversion(scanner.next()));
 //		System.out.println(NumberWithoutSpace());
-		FindAlpahbet();
+//		FindAlpahbet();
+		
+		StringRepeat();
+		
+	}
+
+	private static void StringRepeat() {
+		sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		
+		for(int i = 0 ; i < T ; i++) {
+			
+			int R = sc.nextInt();
+			String s = sc.next();
+			for(int j = 0 ; j < s.length() ; j++) {
+				for(int k = 0 ; k < R ; k++) {
+					System.out.print(s.charAt(j));
+				}
+			}
+			System.out.println();
+		}	
 		
 	}
 
@@ -29,7 +49,9 @@ class Main {
 //
 //		for(int i = 0 ; i < s.length() ; i ++) {
 //			char ch = s.charAt(i);
-//			arr[ch - 'a'] = i;
+//			if(arr[ch - 'a'] == -1) {
+//				arr[ch - 'a'] = i;
+//			}
 //		}
 //
 //		for(int value : arr) {
