@@ -11,8 +11,32 @@ class Main {
 //		System.out.println(ASCIIConversion(scanner.next()));
 //		System.out.println(NumberWithoutSpace());
 //		FindAlpahbet();
+//		StringRepeat();
+		EnWord();
 		
-		StringRepeat();
+	}
+
+	private static void EnWord() {
+		
+		sc = new Scanner(System.in);
+		int[] arr =  new int[26];
+		String s = sc.next().toUpperCase();
+		int max = -1;
+		char ch = '?';
+		
+		for(int i = 0 ; i < s.length() ; i++) {
+			arr[s.charAt(i)-65]++;
+			
+			if(max<arr[s.charAt(i)-65]) {
+				max = arr[s.charAt(i)-65];
+				ch = s.charAt(i);
+			}else if(max == arr[s.charAt(i)-65]){
+				ch = '?';
+			}
+				
+		}
+
+		System.out.println(ch);
 		
 	}
 
