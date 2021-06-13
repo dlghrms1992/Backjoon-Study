@@ -1,6 +1,7 @@
 package StringAlghorithm;
 
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 class Main {
 	
@@ -12,8 +13,18 @@ class Main {
 //		System.out.println(NumberWithoutSpace());
 //		FindAlpahbet();
 //		StringRepeat();
-		EnWord();
+//		EnWord();
+		numberOfwords();
 		
+	}
+
+	private static void numberOfwords() {
+		
+		sc = new Scanner(System.in);
+		String words = sc.nextLine();
+		StringTokenizer st = new StringTokenizer(words, " ");
+		
+		System.out.println(st.countTokens());
 	}
 
 	private static void EnWord() {
