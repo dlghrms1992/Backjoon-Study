@@ -25,7 +25,73 @@ class Main {
 //			e.printStackTrace();
 //		}
 		
-		dial();
+//		dial();
+		
+		CroatiaAlphabet();
+		
+	}
+
+	private static void CroatiaAlphabet() {
+		
+		sc = new Scanner(System.in);
+		
+		String text = sc.nextLine();
+		int count = 0;
+		
+		for(int i = 0 ; i < text.length() ; i++) {
+			
+			char ch = text.charAt(i);
+			
+			if(ch == 'c') {
+				if( i < text.length() -1 ) {
+					if(text.charAt(i+1) == '=') {
+						i++;
+					}
+					else if(text.charAt(i + 1) == '-') {
+						i++;
+					}					
+				}
+			}else if(ch == 'd') {
+				if( i < text.length() -1) {					
+					if(text.charAt(i + 1) == 'z') {
+						if(i < text.length() - 2) {
+							if(text.charAt(i + 2) == '=') {
+								i += 2;
+							}					
+						}
+					}else if(text.charAt(i + 1) =='-') {
+						i++;
+					}
+				} 
+			}else if(ch == 'l') {
+				if(i < text.length() - 1) {
+					if(text.charAt(i + 1) == 'j') {	
+						i++;
+					}
+				}
+			}else if(ch == 'n') {
+				if(i < text.length() - 1) {
+					if(text.charAt(i + 1) == 'j') {
+						i++;
+					}
+				}
+			}else if(ch == 's') {
+				if(i < text.length() - 1) {
+					if(text.charAt(i + 1) == '=') {	
+						i++;
+					}
+				}
+		    }else if(ch == 'z') {
+				if(i < text.length() - 1) {
+					if(text.charAt(i + 1) == '=') {	
+						i++;
+					}
+				}
+			}
+			count++;
+		}
+		
+		System.out.println(count);
 		
 	}
 
