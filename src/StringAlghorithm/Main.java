@@ -24,10 +24,35 @@ class Main {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-		
 //		dial();
+//		CroatiaAlphabet();
+		boolean[] checker = new boolean[26];
+		groupWordChecker(checker);
 		
-		CroatiaAlphabet();
+	}
+
+	private static boolean groupWordChecker(boolean[] checker) {
+		
+		sc = new Scanner(System.in);
+		int prev = 0;
+		String word = sc.nextLine();
+		
+		for(int i = 0 ; i < word.length() ; i++) {
+			int now = word.charAt(i);
+			
+			if(prev != now) {
+				
+				if(checker[now - 'a'] == false) {
+					checker[now - 'a'] = true;
+					prev = now;
+				}else {
+					return false;
+				}
+			}else {
+				continue;
+			}
+		}
+		return true;
 		
 	}
 
