@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 class Main {
 	
-	private static Scanner sc;
+	private static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		
@@ -23,19 +23,28 @@ class Main {
 //		} catch (IOException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
-//		}
+//		} 
 //		dial();
 //		CroatiaAlphabet();
-		boolean[] checker = new boolean[26];
-		groupWordChecker(checker);
 		
+		int count = 0;
+		int n = sc.nextInt();	
+		
+		for(int i = 0 ; i < n ; i++) {
+			
+			if(groupWordChecker()== true) {
+				count++;
+			}
+		}
+		
+		System.out.println(count);
 	}
 
-	private static boolean groupWordChecker(boolean[] checker) {
+	private static boolean groupWordChecker() {
 		
-		sc = new Scanner(System.in);
+		boolean[] checker = new boolean[26];
 		int prev = 0;
-		String word = sc.nextLine();
+		String word = sc.next();
 		
 		for(int i = 0 ; i < word.length() ; i++) {
 			int now = word.charAt(i);
