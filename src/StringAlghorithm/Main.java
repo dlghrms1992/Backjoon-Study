@@ -26,18 +26,25 @@ class Main {
 //		} 
 //		dial();
 //		CroatiaAlphabet();
+//		int count = 0;
+//		int n = sc.nextInt();	
+//		
+//		for(int i = 0 ; i < n ; i++) {
+//			
+//			if(groupWordChecker()== true) {
+//				count++;
+//			}
+//		}
+//		
+//		System.out.println(count);
 		
-		int count = 0;
-		int n = sc.nextInt();	
+		BreakEventPoint();
 		
-		for(int i = 0 ; i < n ; i++) {
-			
-			if(groupWordChecker()== true) {
-				count++;
-			}
-		}
 		
-		System.out.println(count);
+	}
+
+	private static void BreakEventPoint() {
+		
 	}
 
 	private static boolean groupWordChecker() {
