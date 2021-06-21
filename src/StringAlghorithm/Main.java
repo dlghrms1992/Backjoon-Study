@@ -44,7 +44,15 @@ class Main {
 	}
 
 	private static void BreakEventPoint() {
+		int A = sc.nextInt(); // 불변 비용
+		int B = sc.nextInt(); // 가변 비용
+		int C = sc.nextInt(); // 상품 가격
 		
+		if(C <= B) {
+			System.out.println("-1");
+		}else {
+			System.out.println((A/(C-B))+1);
+		}
 	}
 
 	private static boolean groupWordChecker() {
