@@ -37,10 +37,27 @@ class Main {
 //		}
 //		
 //		System.out.println(count);
+//		BreakEventPoint();
+		Honeycomb();
 		
-		BreakEventPoint();
 		
+	}
+
+	private static void Honeycomb() {
+		int N = sc.nextInt();
+		int count = 1; // 겹수 최소루트
+		int range = 2; // 범위 최소값 기준
 		
+		if(N == 1) {
+			System.out.println(1);
+		}else {
+			while(range <= 1) {
+				range = range + (6 * count);
+				count++;
+			}
+			System.out.println(count);
+		}
+	
 	}
 
 	private static void BreakEventPoint() {
