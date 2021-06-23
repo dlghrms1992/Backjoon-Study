@@ -38,8 +38,14 @@ class Main {
 //		
 //		System.out.println(count);
 //		BreakEventPoint();
-		Honeycomb();
+//		Honeycomb();
+		FindAFountain();
 		
+		
+	}
+
+	private static void FindAFountain() {
+		// TODO Auto-generated method stub
 		
 	}
 
