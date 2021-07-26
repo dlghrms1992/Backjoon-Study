@@ -39,9 +39,28 @@ class Main {
 //		System.out.println(count);
 //		BreakEventPoint();
 //		Honeycomb();
-		FindAFountain();
+//		FindAFountain();
+		SnailWantsToClimb();
 		
 		
+	}
+
+	private static void SnailWantsToClimb() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int up = sc.nextInt();
+		int down = sc.nextInt();
+		int length = sc.nextInt();
+		
+		int day = (length - down) / (up - down);
+		
+		
+		if((length - down) % (up - down) != 0) {
+			day++;
+		}
+		
+		System.out.println(day);
 	}
 
 	private static void FindAFountain() {
@@ -59,6 +78,9 @@ class Main {
 				// 분모는 대각선 개수 - (X 번째 - 직전 대각선까지의 누적합 - 1) 
 				// 분자는 X 번째 - 직전 대각선까지의 누적합 
 				if(cross_count % 2 == 1) {
+					System.out.println(X);
+					System.out.println(prev_count_sum);
+					System.out.println(cross_count);
 					System.out.println((cross_count - (X - prev_count_sum -1)) + "/" + (X - prev_count_sum));
 					break;
 				}	else {	// 대각선의 개수가 짝수라면 
