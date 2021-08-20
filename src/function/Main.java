@@ -74,7 +74,7 @@ class Main {
 		boolean[] check = new boolean[10001];
 		
 		for(int number = 1 ; number <= 10000 ; number++) {
-			int n = d(number);
+			int n = (number);
 			if(n <= 10000) {
 				check[n] = true;
 			}
