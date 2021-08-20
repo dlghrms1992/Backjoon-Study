@@ -36,6 +36,8 @@ class Main {
 			case 4673:
 				SelfNumber();
 				break;
+			case :
+				break;
 			default:
 				System.out.println("해당 문제를 아직 풀지 못했거나, 없는 문제입니다.");
 		}
