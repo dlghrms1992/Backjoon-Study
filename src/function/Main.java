@@ -13,13 +13,39 @@ class Main {
 		
 //		main.SelfNumber();
 	
-		System.out.println(main.ArithmeticSequnce(scanner.nextInt()));
+		System.out.println("==================== Start =======================");
+		System.out.println("알고리즘 문제 번호를 입력하세요 ~~~~~~~~~~~~~~~");
+		
+		int num = scanner.nextInt();
+		ProblumNumber(num);
+		
+//		System.out.println(main.ArithmeticSequnce(scanner.nextInt()));
+		System.out.println("==================== END =======================");
+		
+	}
+
+	public static void ProblumNumber(int num) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+	
+		
+		switch(num){
+			case 1065:
+				System.out.println(ArithmeticSequence(a));
+				break;
+			case 4673:
+				SelfNumber();
+				break;
+			default:
+				System.out.println("해당 문제를 아직 풀지 못했거나, 없는 문제입니다.");
+		}
 		
 	}
 
 	// 1065 한수 2021.06.06
-	private int ArithmeticSequnce(int num) {
+	private static int ArithmeticSequence(int num) {
 		
+	
 		int cnt = 0;
 		
 			if(num < 100) {
@@ -44,7 +70,7 @@ class Main {
 
 
 	// 4673 셀프넘버 2021.06.06
-	void SelfNumber() {
+	static void SelfNumber() {
 		boolean[] check = new boolean[10001];
 		
 		for(int number = 1 ; number <= 10000 ; number++) {
