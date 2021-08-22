@@ -1,6 +1,10 @@
 package function;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 class Main {
 	
@@ -26,22 +30,44 @@ class Main {
 
 	public static void ProblumNumber(int num) {
 		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
+		
+//		int a = sc.nextInt();
 	
 		
 		switch(num){
 			case 1065:
-				System.out.println(ArithmeticSequence(a));
+//				System.out.println(ArithmeticSequence(a));
 				break;
 			case 4673:
 				SelfNumber();
 				break;
-			case :
+			case 2869:
+			try {
+				SnailWantToGoUp();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 				break;
 			default:
 				System.out.println("해당 문제를 아직 풀지 못했거나, 없는 문제입니다.");
 		}
 		
+	}
+
+	//2869 달팽이는 올라가고싶다.
+	private static void SnailWantToGoUp() throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		int a = Integer.parseInt(st.nextToken());
+		int b = Integer.parseInt(st.nextToken());
+		int v = Integer.parseInt(st.nextToken());
+		int day = (v - b) / (a-b);
+		// a 2 b 1 v5  1일차 2a 1b = 1v 2일차 3a 1b = 2v 3일차 4a - 1b = 3v 4일차 5v 
+		if((v-b)%(a-b) != 0) {
+			day++;
+		}
+		
+		System.out.println(day);
 	}
 
 	// 1065 한수 2021.06.06

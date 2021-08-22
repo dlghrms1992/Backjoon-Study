@@ -16,6 +16,8 @@ public class ArithmeticTool implements Number {
 			System.out.println("°ª¾øÀ½");
 			return 0;
 		}else if(arr.length == 1) {
+			result = arr[0];
+		}else {
 			int[] pasteArr = new int[arr.length];
 			for(int i = 0 ; i < arr.length ; i++) {
 				pasteArr[i] = arr[i];
