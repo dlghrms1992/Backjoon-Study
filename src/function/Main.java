@@ -28,6 +28,7 @@ class Main {
 		
 	}
 
+	
 	public static void ProblumNumber(int num) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -48,9 +49,39 @@ class Main {
 				e.printStackTrace();
 			}
 				break;
+			case 10250:
+					ACMHotel();
+				break;
 			default:
 				System.out.println("해당 문제를 아직 풀지 못했거나, 없는 문제입니다.");
 		}
+		
+	}
+	
+	// 10250 ACM 호텔
+	/**
+	 * 포인트1  - 손님들은 가장짧은거리를 걸어서 방에 도착
+	 * 각 층에 w개의 방이 있는 h층 건물
+	 * h * w 형태의 호텔
+	 * 방번호는 YXX나 YYXX -> YY, Y 는 층수, XX는 엘리베이터부터 세었을 때 번호 
+	 * 엘레베이터 이동거리는 신경쓰지 않음 다만 걷는 거리가 같을 때에는 아래층의 방을 더선호 
+	 */
+	public static void ACMHotel() {
+		Scanner sc = new Scanner(System.in);
+		
+		int t = sc.nextInt();
+		for(int i = 0 ; i <t ; i++) {
+			int h = sc.nextInt();
+			int w = sc.nextInt();
+			int n = sc.nextInt();
+		
+			if(n%h == 0) {
+				System.out.println((h * 100) + (n/h));
+			}else {
+				System.out.println(((n%h)*100) + ((n/h) + 1));
+			}		
+		}
+				
 		
 	}
 
@@ -62,7 +93,7 @@ class Main {
 		int b = Integer.parseInt(st.nextToken());
 		int v = Integer.parseInt(st.nextToken());
 		int day = (v - b) / (a-b);
-		// a 2 b 1 v5  1일차 2a 1b = 1v 2일차 3a 1b = 2v 3일차 4a - 1b = 3v 4일차 5v 
+		// a3 b 1 v8 = (8-1)  1일차 2a 1b = 1v 2일차 3a 1b = 2v 3일차 4a - 1b = 3v 4일차 5v 
 		if((v-b)%(a-b) != 0) {
 			day++;
 		}

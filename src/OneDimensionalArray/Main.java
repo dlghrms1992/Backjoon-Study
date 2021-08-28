@@ -23,6 +23,8 @@ class Main {
 		main.aboveAverage();
 	}
 	
+
+	
 	// 4344 Æò±ÕÀº ³Ñ°ÚÁö 2021.06.05
 	public void aboveAverage() {
 	 
@@ -51,6 +53,7 @@ class Main {
 		}
 		
 	}
+	
 	
 	// ox ÄûÁî 2021.06.05
 	public void oxquizTotal() {
