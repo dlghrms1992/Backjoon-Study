@@ -52,10 +52,48 @@ class Main {
 			case 10250:
 					ACMHotel();
 				break;
+			case 2775:
+				BecomeTheWomensPresident();
+			break;
 			default:
 				System.out.println("해당 문제를 아직 풀지 못했거나, 없는 문제입니다.");
 		}
 		
+	}
+	/**
+	 * 2775 : 부녀회장이 됥테야
+	 *  주희는 부녀회장이 되고싶어 각층의 사람들을 모아 반상회를 주최하려고함
+	 *  이 아파트에 거주하려면 조건이 있는데 "a층의 b호에 살려면 자신의 아래(a-1)층의 1호부터 b호까지 사람들의 수의 합만큼 사람들을 데려와 살아야한다는 계약 조항을`
+	 *  꼭 지키고 들어와야 한다.
+	 *  아파트에 비어있는 집은 없고 모든 거주민들이 계약조건을 지키고 왔다고 가정했을 때, 주어지는 양의 정수 k와 n에 대해 
+	 *  k층에 n호에 몇 명이 살고 있는지 출력하라. 단, 아파트에는 0층부터 있고 가층에는 1호부터 있으며, 0층의 i호에는 i명이 산다.
+	 * 
+	 *
+	 */
+	public static void BecomeTheWomensPresident() {
+		Scanner sc = new Scanner(System.in);
+	
+		int[][] apt = new int[15][15];
+		
+		for(int i = 0 ; i < 15 ; i++) {
+			apt[i][1] = 1; // i층 1호
+			apt[0][i] = i; // 0층 i호
+		}
+		
+		for(int i = 1 ; i < 15 ; i++) { // 1층부터 14층까지
+			
+			for(int j = 2 ; j < 15 ; j++) { // 2호부터 14호까지
+				apt[i][j] = apt[i][j-1] + apt[i-1][j];
+			}
+		}
+		
+		int t = sc.nextInt();
+		
+		for(int i = 0 ; i < t ; i++) {
+			int k = sc.nextInt();
+			int n = sc.nextInt();
+			System.out.println(apt[k][n]);
+		}
 	}
 	
 	// 10250 ACM 호텔
