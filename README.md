@@ -43,6 +43,7 @@ public class Main {
         int count = 0;
         for(int i = 0 ; i < num ; i++){
             int x = sc.nextInt();
+            if(x == 1) continue;
             if(x%2 == 1){
                 count++;
             }
