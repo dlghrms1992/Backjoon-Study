@@ -51,3 +51,14 @@ public class Main {
         System.out.println(count);
     }
 }
+
+#2581번 -> 1978과 같이 정리
+import java.util.Sacnner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int M = sc.nextInt();
+        int N = sc.nextInt();
+    }
+}
