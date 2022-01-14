@@ -62,3 +62,19 @@ public class Main{
         int N = sc.nextInt();
     }
 }
+
+#11653 -> 소인수 분해 
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int value = sc.nextInf();
+        int a, b;
+        value/a;
+        value%b;
+       
+    }
+}
+
