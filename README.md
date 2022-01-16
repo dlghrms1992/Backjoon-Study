@@ -78,3 +78,28 @@ public class Main{
     }
 }
 
+#1929 소수 구하기 -? 조금 미흡한거 같음
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+
+        List<Integer> result = new ArrayList();
+        
+        if(1 <= m && m <= 1000000 && 1 <= n && n <= 1000000){
+            for(int i = m ; m <= n; i++){
+
+                if(i%2 > 0){
+                    result.add(i);
+                }
+            }
+            System.out.println(result.toString());
+        }
+    }
+}
+
+
