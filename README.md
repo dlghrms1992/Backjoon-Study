@@ -102,4 +102,11 @@ public class Main {
     }
 }
 
-
+#1085 직사각형에서 탈출
+import java.util.Scanner;
+public class Main {
+    public static void main(){
+        Scanner sc = new Scanner(System.in);
+        int a, b, c,d = sc.nextint();
+    }    
+}
